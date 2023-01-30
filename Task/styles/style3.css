@@ -124,7 +124,7 @@ li a {
     height: 650px;
     width: 100%;
     font-size: 25px;
-    background-image: url(/Task1/assets/hockey2.jpg);
+    background-image: url(/Task/assets/hockey2.jpg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -155,7 +155,7 @@ li a {
     display: inline-block;
     position: absolute;
     top: 280px;
-    background-image: url(/Task1/assets/hockey2.jpg);
+    background-image: url(/Task/assets/hockey2.jpg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -166,7 +166,7 @@ li a {
     position: absolute;
     height: 650px;
     width: 100%;
-    background-image: url(/Task1/assets/hockey2.jpg);
+    background-image: url(/Task/assets/hockey2.jpg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
