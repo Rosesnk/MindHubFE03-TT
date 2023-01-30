@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.img-hockey{
+    display: none;
+}
+
+.first-title{
+    display: block;
+    height: 100px;
+    background-color: white;
+    color: black;
+    font-weight: normal;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.portada{
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+li a{
+    box-sizing: border-box;
+    display: inline;
+
+}
+
+.nav{
+    box-sizing: border-box;
+    display: inline;
+    font-size: 25px;
+    position: absolute;
+    top: 90px;
+    right: 50px;
+    list-style: none;
+    
+}
+
+li a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.boton-home{
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: rgb(21, 128, 159);
+    border-radius: 1px;
+    border: 1px solid black;
+}
+
+.boton-home:hover{
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: rgb(69, 147, 44 );
+    border-radius: 1px;
+    border: 1px solid black;
+}
+
+.boton-about{
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: rgb(21, 128, 159);
+    border-radius: 1px;
+    border: 1px solid black;
+
+}
+
+.boton-about:hover{
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: rgb(69, 147, 44 );
+    border-radius: 1px;
+    border: 1px solid black;
+}
+
+.boton-contact{
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: rgb(21, 128, 159);
+    border-radius: 1px;
+    border: 1px solid black;
+
+}
+
+.boton-contact:hover{
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: rgb(69, 147, 44 );
+    border-radius: 1px;
+    border: 1px solid black;
+}
+
+.second-title{
+    display: block;
+    background-color: white;
+    height: 150px;
+    
+}
+
+.second-title-h2{
+    display: block;
+    color: black;
+    height: 180px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    padding-left: 600px;
+    padding-top: 60px;
+    border: 2px solid black;
+    
+}
+
+.logo{
+    display: inline;
+    font-size: 25px;
+    position: absolute;
+    top: 680px;
+    left: 100px;
+    list-style: none;
+    border: 1px solid black;
+}
+
+.articles{
+    display: inline;
+    position: absolute;
+    left: 350px;
+    top: 550px;
+    padding: 100px 400px 100px 0px;
+    font-size: 25px;
+}
+
+.article-h3{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.article-p{
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.article-box{
+    box-sizing: border-box;
+    display: block;
+    padding: 30px;
+    
+}
+
+.articles2{
+    display: inline-block;
+    position: absolute;
+    left: 250px;
+    top: 620px;
+}
+
+.articles3{
+    display: inline-block;
+    position: absolute;
+    left: 400px;
+    top: 680px;
+    padding-bottom: 100px;
+}
+
+.article-p2{
+    font-size: 25px;
+
+}
