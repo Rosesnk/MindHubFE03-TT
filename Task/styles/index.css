@@ -115,10 +115,13 @@ header{
 }
 /* contact */
 .seccion3{
+    display: flex;
+    flex-direction: column;
     background-image: url(/Task/assets/hockey3.jpg);
     background-size: cover;
     text-align: center;
     height: 600px;
+    align-items: center;
 }
 .second-title-h2{
     color: white;
@@ -131,6 +134,13 @@ header{
 .article-p2 a{
     text-decoration: none;
     color: aquamarine;
+}
+.articles3{
+    background-color: black;
+    opacity: 0.7;
+    width: 350px;
+    border-radius: 12px;
+    padding: 12px;
 }
 /* rules */
 .main-rules{
@@ -173,4 +183,73 @@ span{
     line-height: 28px;
 
 }
+/* gameinfo */
+.gameinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    text-align: center;
+    height: 800px;
+    background-image: url(/Task/assets/hockey2.jpg);
+    background-size: cover;
+}
+.gameinfo h1,h2{
 
+    color: brown;
+}
+thead th{
+    color: brown;
+    padding: 5px;
+}
+table {
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 32px;
+    padding: 12px;
+    border: 1px solid brown;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+tbody th{
+    padding: 5px;
+}
+.date{
+    color: blue;
+    background-color: green;
+}
+.teams{
+    background-color: blue;
+    color: crimson;
+}
+.location{
+    background-color: blueviolet;
+    color: yellow
+}
+.time{
+    background-color: bisque;
+    color: forestgreen
+}
+.gameinfo div p{
+    height: 28px;
+    
+}
+div p b {
+    color: brown;
+    /* text-align: left; */
+}
+.finalinfo{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    width: 500px;   
+    align-content: space-evenly;
+    background-color: white;
+    opacity: 0.7;
+    padding: 22px;
+    border-radius: 30px;
+}
+.finalinfo div{
+    height: 50px;
+    text-align: start;
+    line-height: normal;
+}
