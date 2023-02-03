@@ -18,14 +18,14 @@ header{
 .first-title{
     text-align: center;
     text-decoration: none;
-    color: blueviolet;
+    color: brown;
     margin-left: 325px;
 }
 .nav a{
     display: block;
     text-decoration: none;
     color: inherit;
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
 }
 .nav{
@@ -36,14 +36,14 @@ header{
 .nav li{
     display: inline-block;
     width: 10%;
-    background-color: aqua;
+    background-color: brown;
     
     text-align: center;
-    color: black;
-    border-radius: 34px;
+    color: white;
+    border-radius: 5px;
     height: 20px;
     align-items: center;
-    font-size: 25px;
+    font-size: 35px;
     margin: 12px;
     
 }
@@ -114,14 +114,14 @@ header{
     border-radius: 34px;
 }
 /* contact */
-.articulos3{
+.seccion3{
     background-image: url(/Task/assets/hockey3.jpg);
     background-size: cover;
     text-align: center;
     height: 600px;
 }
 .second-title-h2{
-    color: brown;
+    color: white;
     font-size: 25px;    
 }
 .article-p2{
@@ -133,4 +133,44 @@ header{
     color: aquamarine;
 }
 /* rules */
+.main-rules{
+    display: flex;
+    flex-direction: column;
+    background-image: url(/Task/assets/hockey1.jpg);
+    height: 1320px;
+    text-align: center;
+    align-items: center;
+    background-size: cover;
+    
+}
+.main-rules section{
+    text-align: left;
+    width: 550px;
+    background-color: white;
+    opacity: 0.7;
+    padding: 30PX;
+    border-radius: 32px;
+}
+.main-rules dt{
+    color: brown;
+    font-size: 25px;
+}
+.main-rules dd{
+    font-size: 16px;
+    line-height: 25px;
+}
+span{
+    color: brown;
+
+}
+.main-rules li{
+    list-style-position: outside;
+    margin-bottom: 12px;
+    padding-left: 15px;
+}
+.main-rules h2,h3{text-align: center;
+    color: brown;
+    line-height: 28px;
+
+}
 
