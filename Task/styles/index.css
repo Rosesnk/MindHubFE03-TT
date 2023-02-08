@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;    
 }
+:root {
+    --main-title: rgb(123, 62, 25);
+}
 main{
     background-color: aliceblue;
     margin-top: 25px;
@@ -10,16 +13,22 @@ main{
 }
 header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     align-items: center;
+    justify-content:center ;
+}
+.logo{
+    width: 180px;
+    height: 180px;
 }
 
 .first-title{
+    display:inline-block;
     text-align: center;
     text-decoration: none;
-    color: brown;
-    margin-left: 325px;
+    color: var(--main-title);
+    margin: 25px;
 }
 .nav a{
     display: block;
@@ -36,8 +45,7 @@ header{
 .nav li{
     display: inline-block;
     width: 10%;
-    background-color: brown;
-    
+    background-color: var(--main-title);
     text-align: center;
     color: white;
     border-radius: 5px;
@@ -48,7 +56,7 @@ header{
     
 }
 .nav li:hover{
-    background-color: green;
+    background-color: #b28b84;
     color: white;
 }
 .second-title{
@@ -58,7 +66,7 @@ header{
     padding-top: 25px;
     text-align: center;
     justify-content: center;
-    color: brown;
+    color: var(--main-title);
     opacity: 0.8;
 
 }
@@ -67,12 +75,12 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 500px;    
+    height: 700px;    
     line-height: 30px;
 }
 .articulos .articles{
     width: 300px;
-    height: 250px;
+    height: 300px;
     border-radius: 32px;
     background-color: white;
     text-align: center;
@@ -83,16 +91,16 @@ header{
     height: 80px;
 }
 .article-h3{
-    color: brown;
+    color: var(--main-title);
     font-size: 25px;
 }
 .seccion{
-    background-image: url(/Task/assets/hockey1.jpg);
+    background-image: url(../assets/hockey1.jpg);
 
 }
 /* about */
 .seccion2{
-    background-image: url(/Task/assets/hockey2.jpg);
+    background-image: url(../assets/hockey2.jpg);
     background-size: cover;
     height: 800px;
 }
@@ -104,7 +112,9 @@ header{
     height: 600px;    
     line-height: 30px;
     text-align: center;
-
+}
+.article-box{
+    padding: 20px;
 }
 .articulos2 .articles{
     height: 600px;
@@ -117,7 +127,7 @@ header{
 .seccion3{
     display: flex;
     flex-direction: column;
-    background-image: url(/Task/assets/hockey3.jpg);
+    background-image: url(../assets/hockey3.jpg);
     background-size: cover;
     text-align: center;
     height: 600px;
@@ -146,7 +156,7 @@ header{
 .main-rules{
     display: flex;
     flex-direction: column;
-    background-image: url(/Task/assets/hockey1.jpg);
+    background-image: url(../assets/hockey1.jpg);
     height: 1320px;
     text-align: center;
     align-items: center;
@@ -162,7 +172,7 @@ header{
     border-radius: 32px;
 }
 .main-rules dt{
-    color: brown;
+    color: var(--main-title);
     font-size: 25px;
 }
 .main-rules dd{
@@ -170,7 +180,7 @@ header{
     line-height: 25px;
 }
 span{
-    color: brown;
+    color: var(--main-title);
 
 }
 .main-rules li{
@@ -179,7 +189,7 @@ span{
     padding-left: 15px;
 }
 .main-rules h2,h3{text-align: center;
-    color: brown;
+    color: var(--main-title);
     line-height: 28px;
 
 }
@@ -189,16 +199,16 @@ span{
     flex-direction: column;
     align-items: center ;
     text-align: center;
-    height: 800px;
-    background-image: url(/Task/assets/hockey2.jpg);
+    height: 1600px;
+    background-image: url(../assets/hockey2.jpg);
     background-size: cover;
 }
 .gameinfo h1,h2{
 
-    color: brown;
+    color: var(--main-title);
 }
 thead th{
-    color: brown;
+    color: var(--main-title);
     padding: 5px;
 }
 table {
@@ -206,7 +216,7 @@ table {
     opacity: 0.7;
     border-radius: 32px;
     padding: 12px;
-    border: 1px solid brown;
+    border: 1px solid var(--main-title);
     margin-bottom: 30px;
     margin-top: 30px;
 }
@@ -234,7 +244,7 @@ tbody th{
     
 }
 div p b {
-    color: brown;
+    color: var(--main-title);
     /* text-align: left; */
 }
 .finalinfo{
@@ -252,4 +262,135 @@ div p b {
     height: 50px;
     text-align: start;
     line-height: normal;
+}
+iframe{
+    height: 100px;
+}
+/*registration*/
+.mainRegist{    
+    position: relative;
+    display: block;
+    background-image: url(../assets/hockey2.jpg);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content: center;
+    align-items: center;
+    
+}
+.second-title-regist{
+    font-size: 25px;
+    align-items: center;
+    align-content: center;
+}
+.inputText {
+    padding: 3px;
+    box-shadow: 3px 3px 5px #b28b84;
+    font-size: 14px;
+    font-weight: 600;
+    width: 300px;
+    border:1px solid var(--main-title) ;
+    border-radius: 5px;
+}
+label{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+    width: 160px;
+    text-align: right;
+    cursor: pointer;
+    
+}
+input[type=radio]{
+    cursor: pointer;
+    
+}
+legend{
+    font-size: 20px;
+    font-weight: bolder;
+}
+fieldset{
+    height: 550px;
+    border:solid 1px #7b3e19;
+    border-radius:  32px;
+    padding: 50px;
+    width: 600px;    
+    background: rgba(233, 218, 210, 0.8);
+    margin: 15px;
+    
+}
+.fieldset1 div{
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    margin: 15px;
+}
+.fieldset2{
+    height: 300px;
+    text-align: center;
+}
+.gender{
+    border: none;
+    height: 100px;
+    padding: 10px;
+    width: 300px;
+    background: none;
+}
+.genderLabels{
+    width: 100px;
+}
+.gradeFieldset{
+    display: flex;
+    width: 300px;
+    flex-direction: row;
+}
+.gradeFieldset input{
+    display: inline-flex;    
+}
+.gradeFieldset label{
+    padding: 15px;
+    font-size: 12px;
+}
+.fieldset3 {
+    height: 130px;
+    padding: 12px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+.fieldset4{
+    height: 170px;
+    padding: 12px;
+    text-align: center;
+}
+.fieldset5{
+    font-size: 12px;
+    line-height: 25px;
+    height: 400px;
+    padding: 42px;
+}
+.parentSign, .dateSign{
+    width: 200px;
+}
+.btn{
+    border: #7b3e19;
+    background-color: #b28b84;
+    height: 50px;
+    width: 85px;
+    text-align: center;
+    color: aliceblue;
+    margin: 7px;
+    border: 1px solid var(--main-title);
+    border-radius: 5px;
+}
+.btn::after{
+    background-color: aliceblue;
+    border: 1px solid var(--main-title);
+}
+.btn:hover{
+    cursor: pointer;
 }

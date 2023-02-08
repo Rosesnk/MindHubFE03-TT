@@ -34,47 +34,50 @@
             </ul>
         </div>
 
-    <main>
+    <main class="mainRegist">
         <div class="second-title">
-            <h2 class="second-title-h2"><strong>Registration Form</strong></h2>
+            <h2 class="second-title-regist"><strong>Registration Form</strong></h2>
         </div>
 
         <form action="./show_data.html" method="get">
 
-        <fieldset>
+        <fieldset class="fieldset1">
             <div>
                 <label for="name">Player's First Name:</label>
-                <input type="text" name="name" id="name">
+                <input class="inputText" type="text" name="name" id="name">
 
                 <label for="lastName">Last Name:</label>
-                <input type="text" name="lastName" id="lastName">
+                <input class="inputText" type="text" name="lastName" id="lastName">
             </div>
 
-            <label for="Address">Street Address:</label>
-            <input type="text" name="Address" id="Address">
-
             <div>
+
+                <label for="Address">Street Address:</label>
+                <input class="inputText" type="text" name="Address" id="Address">
+            
                 <label for="city">City:</label>
-                <input type="text" name="city" id="city">
-
+                <input class="inputText" type="text" name="city" id="city">
+                    
                 <label for="Code">Zip Code:</label>
-                <input type="text" name="Code" id="Code">
-            </div>
-
-            <div>
+                <input class="inputText" type="text" name="Code" id="Code">
+                
+                
                 <label for="birthDate">Birth Date:</label>
-                <input type="date" name="birthDate" id="birthDate">
-
+                <input class="inputText" type="date" name="birthDate" id="birthDate">
+                
                 <!--En type radio, se agrega name, id y value en el input. En name debe ir un mismo nombre para todos los input de la misma seccion o legend que los relaciona. En id y value debe ir un nombre que haga referencia al texto del label correspondiente. La etiqueta label puede ir antes o despues del input, en este caso el casillero se posiciona antes o despues del input. En for, debe ir el mismo nombre que se le pone a id y value-->
-
-                <legend>Gender:</legend>
-                <input type="radio" name="gender" id="female" value="female">
-                <label for="female">Female</label>
-                <input type="radio" name="gender" id="male" value="male">
-                <label for="male">Male</label>
+                <fieldset class="gender">
+                    
+                    <legend>Gender:</legend>
+                    <label class="genderLabels"  for="female">Female</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label  class="genderLabels" for="male">Male</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                </fieldset>
             </div>
+           
 
-            <div>
+            <div class="gradeFieldset">
                 <legend>Grade:</legend>
                 <label for="preschool">Pre-School</label>
                 <input type="radio" name="grade" id="preschool" value="preschool">
@@ -96,7 +99,7 @@
             </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="fieldset2">
             <legend><strong>Which elementary school do you live near?</strong></legend>
             <legend><strong>Closest School:</strong></legend>
             <div>
@@ -109,8 +112,7 @@
 
                     <label for="howard">Howard A Yeager</label>
                     <input type="radio" name="cschool" id="howard" value="howard">
-                </div>
-                <div>
+                
                     <label for="merjorie">Merjorie P Hart</label>
                     <input type="radio" name="cschool" id="merjorie" value="merjorie">
                     
@@ -123,7 +125,7 @@
             </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="fieldset3">
             <legend><strong>What position(s) do you normally play? (chech all that
             apply)</strong></legend>
 
@@ -148,10 +150,10 @@
             </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="fieldset4">
             <legend><strong>Uniform Size:</strong></legend>
             <div>
-                <label for="ySmal">Youth Smal</label>
+                <label for="ySmal">Youth Small</label>
                 <input type="radio" name="usize" id="ySmal" value="ySmal">
                 
                 <label for="yMedium">Youth Medium</label>
@@ -173,7 +175,7 @@
                 <input type="radio" name="usize" id="exlarge" value="exlarge">
             </div>
         </fieldset>
-        <fieldset>
+        <fieldset class="fieldset5">
             <legend><strong>Permission to Play</strong></legend>
             <p>I, the parent or guardian of the minor registrant, agree that the
             registrant and I will abide by all the rules of the Mighty Ducks
@@ -190,14 +192,14 @@
             by signing below, also acknowledge that I have read the
             cancellation policy and agree to its terms.</p>
 
-            <label for="parent">Parent/GuardianSignature</label>
+            <label class="parentSign" for="parent">Parent/GuardianSignature</label>
             <input type="text" name="parent" id="parent">
 
-            <label for="date">Date</label>
+            <label class="dateSign" for="date">Date</label>
             <input type="text" name="date" id="date">
         </fieldset>
 
-        <input type="submit" value="Send">
+        <input class="btn" type="submit" value="Send">
 
         </form>
     </main>
