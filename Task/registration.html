@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDHL</title>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/jpg" href="../assets/favicon.ico">
+
+    <!--<link rel="stylesheet" href="/Task/styles/style1.css">-->
+    <!--<link rel="stylesheet" href="/Task/styles/style2.css">-->
+    <!-- <link rel="stylesheet" href="/Task/styles/style3.css"> -->
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <header>
+        <figure>
+            <img class="logo" src="../assets/LogoMightyducks01.png" alt="logo" width="130" height="130">
+        </figure>
+        <div class="first-title">
+            <h1>Mighty Ducks Hockey League</h1>
+        </div>
+    </header>
+        <div class="navigation">
+            <ul class="nav">
+                <li class="boton-home" ><a href="../index.html">Home</a></li>
+                <li class="boton-about"><a href="../about.html">About MDHL</a></li>
+                <li class="boton-rules"><a href="../rules.html">Rules</a></li>
+                <li class="boton-gamei"><a href="../gameInformation.html">Game Information</a></li>
+                <li class="boton-registration"><a href="#">Registration</a></li>
+                <li class="boton-contact"><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    <main>
+        <div class="second-title">
+            <h2 class="second-title-h2"><strong>Registration Form</strong></h2>
+        </div>
+
+        <form action="./show_data.html" method="get">
+
+        <fieldset>
+            <div>
+                <label for="name">Player's First Name:</label>
+                <input type="text" name="name" id="name">
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName">
+            </div>
+
+            <label for="Address">Street Address:</label>
+            <input type="text" name="Address" id="Address">
+
+            <div>
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city">
+
+                <label for="Code">Zip Code:</label>
+                <input type="text" name="Code" id="Code">
+            </div>
+
+            <div>
+                <label for="birthDate">Birth Date:</label>
+                <input type="date" name="birthDate" id="birthDate">
+
+                <!--En type radio, se agrega name, id y value en el input. En name debe ir un mismo nombre para todos los input de la misma seccion o legend que los relaciona. En id y value debe ir un nombre que haga referencia al texto del label correspondiente. La etiqueta label puede ir antes o despues del input, en este caso el casillero se posiciona antes o despues del input. En for, debe ir el mismo nombre que se le pone a id y value-->
+
+                <legend>Gender:</legend>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">Male</label>
+            </div>
+
+            <div>
+                <legend>Grade:</legend>
+                <label for="preschool">Pre-School</label>
+                <input type="radio" name="grade" id="preschool" value="preschool">
+
+                <label for="1st">1st</label>
+                <input type="radio" name="grade" id="1st" value="1st">
+
+                <label for="2nd">2nd</label>
+                <input type="radio" name="grade" id="2nd" value="2nd">
+
+                <label for="3rd">3rd</label>
+                <input type="radio" name="grade" id="3rd" value="3rd">
+
+                <label for="4th">4th</label>
+                <input type="radio" name="grade" id="4th" value="4th">
+
+                <label for="5th">5th</label>
+                <input type="radio" name="grade" id="5th" value="5th">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Which elementary school do you live near?</strong></legend>
+            <legend><strong>Closest School:</strong></legend>
+            <div>
+                <div>
+                    <label for="katzenmaier">AJ Katzenmaier</label>
+                    <input type="radio" name="cschool" id="katzenmaier" value="katzenmaier">
+
+                    <label for="greenbay">Greenbay</label>
+                    <input type="radio" name="cschool" id="greenbay" value="greenbay">
+
+                    <label for="howard">Howard A Yeager</label>
+                    <input type="radio" name="cschool" id="howard" value="howard">
+                </div>
+                <div>
+                    <label for="merjorie">Merjorie P Hart</label>
+                    <input type="radio" name="cschool" id="merjorie" value="merjorie">
+                    
+                    <label for="north">North Elementary</label>
+                    <input type="radio" name="cschool" id="north" value="north">
+                    
+                    <label for="south">South Elementary</label>
+                    <input type="radio" name="cschool" id="south" value="south">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>What position(s) do you normally play? (chech all that
+            apply)</strong></legend>
+
+            <!--El typo checkbox tiene en su input name, id y value. Los atributos name, for e id deben ser iguales para relacionarlo a su label y a que pueden ser de seleccion multiple. En value debe tener un valor mas caracteristico de la seleccion que representa para mostrarlo internamente a quien vvisualiza los resultados-->
+
+            <div>
+                <div>
+                    <label for="positionPlay1">Forward</label>
+                    <input type="checkbox" name="positionPlay1" id="positionPlay1" value="Forward">
+
+                    <label for="positionPlay2">Defense</label>
+                    <input type="checkbox" name="positionPlay2" id="positionPlay2" value="Defense">
+                </div>
+
+                <div>
+                    <label for="positionPlay3">Mildfield</label>
+                    <input type="checkbox" name="positionPlay3" id="positionPlay3" value="Midfield">
+                    
+                    <label for="positionPlay4">Goalkeeper</label>
+                    <input type="checkbox" name="positionPlay4" id="positionPlay4" value="Goalkeeper">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Uniform Size:</strong></legend>
+            <div>
+                <label for="ySmal">Youth Smal</label>
+                <input type="radio" name="usize" id="ySmal" value="ySmal">
+                
+                <label for="yMedium">Youth Medium</label>
+                <input type="radio" name="usize" id="yMedium" value="yMedium">
+                
+                <label for="ylarge">Youth Large</label>
+                <input type="radio" name="usize" id="ylarge" value="ylarge">
+                
+                <label for="Small">Small</label>
+                <input type="radio" name="usize" id="Small" value="Small">
+
+                <label for="Medium">Medium</label>
+                <input type="radio" name="usize" id="Medium" value="Medium">
+                
+                <label for="Large">Large</label>
+                <input type="radio" name="usize" id="Large" value="Large">
+
+                <label for="exlarge">Extra-Large</label>
+                <input type="radio" name="usize" id="exlarge" value="exlarge">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><strong>Permission to Play</strong></legend>
+            <p>I, the parent or guardian of the minor registrant, agree that the
+            registrant and I will abide by all the rules of the Mighty Ducks
+            Hockey League (MDHL). In recognizing the possibility of physical
+            injury associated with hockey and in consideration for the
+            "League" accepting the registrant for its hockey programs and
+            activities, i hereby release, discharge,and/or otherwise indemnify
+            MDHL, their employees and asociated personnel and volunteers,
+            including the facilities used for practices and games, against any
+            claim by or on behalf of the registrant as a result of the
+            registrant`s participation in the programand/orbeing transported
+            to or from MDHL sponsored activities, which transportation By
+            signing below, I hereby agree and authorizethe above. In addition,
+            by signing below, also acknowledge that I have read the
+            cancellation policy and agree to its terms.</p>
+
+            <label for="parent">Parent/GuardianSignature</label>
+            <input type="text" name="parent" id="parent">
+
+            <label for="date">Date</label>
+            <input type="text" name="date" id="date">
+        </fieldset>
+
+        <input type="submit" value="Send">
+
+        </form>
+    </main>
