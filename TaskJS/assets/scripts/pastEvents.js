@@ -19,6 +19,7 @@ function createCards(cardsDate) {
                         <img src="${card.image}" class="card-img-top" alt="..." style="width: 18rem; height: 200px;"> 
                         <div class="card-body"><h5 class="card-title">${card.name}</h5 >
                             <p class="card-text">${card.description}</p>
+                            <p> Date: ${card.date}<p>
                                 <div class=" card-price-ver-mas row  text-center justify-content-evenly">
                                     <p class="precio col-5">Price: $${card.price}</p>
                                     <button type="button" class="btn col-5 btn-outline-primary btn-sm position-absolute  bottom-0 m-2" style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Ver más</button>
