@@ -39,47 +39,47 @@ function chargeCategories(arrayCategories) {
 
 
 function createCheckbox(cat, i) {
-  return `
-  <div class="form-check form-check-inline m-0">
-      <input class="form-check-input checked" type="checkbox" name="categories" id="categoria${i}" value="${cat}"   />
-      <label class="form-check-label" for="categoria${i}">${cat}</label>
-  </div>`;
+    return `
+    <div class="form-check form-check-inline m-0">
+    <input class="form-check-input checked" type="checkbox" name="categories" id="categoria${i}" value="${cat}"   />
+    <label class="form-check-label" for="categoria${i}">${cat}</label>
+    </div>`;
 }
 
 function filterCheckbox(events, checkbox) {
-  let eventfilter = [];
-  if (checkbox.length > 0) {
+    let eventfilter = [];
+    if (checkbox.length > 0) {
     checkbox.forEach((categoria) => {
-      events.forEach((event) => {
+    events.forEach((event) => {
         if (event.category == categoria) {
-          eventfilter.push(event);
+        eventfilter.push(event);
         }
-      });
+        });
     });
-  } else {
+    } else {
     eventfilter = events;
-  }
-  return eventfilter;
+    }
+    return eventfilter;
 }
 
 function find() {
-  let eventsFind = [];
-  let eventCheckbox = filterCheckbox(data.events, selected);
-  eventsFind = eventCheckbox.filter((event) => {
+    let eventsFind = [];
+    let eventCheckbox = filterCheckbox(data.events, selected);
+    eventsFind = eventCheckbox.filter((event) => {
     return eventFilter = (event.name.toLowerCase().includes(search.value.toLowerCase()));
-  });
-  return eventsFind;
+    });
+    return eventsFind;
 }
 
 
 function deleteDuplicate(array) {
-  let only = [];
-  for (let i = 0; i < array.length; i++) {
+    let only = [];
+    for (let i = 0; i < array.length; i++) {
     if (!only.includes(array[i])) {
-      only.push(array[i]);
+        only.push(array[i]);
     }
-  }
-  return only;
+    }
+    return only;
 }
 
 let selected = [];
@@ -92,15 +92,15 @@ categories.innerHTML = categoriesGenerated;
 let checksEvent = document.querySelectorAll('.checked');
 
 checksEvent.forEach((e) => {
-  e.addEventListener("change", () => {
+    e.addEventListener("change", () => {
     if (e.checked) {
-      selected.push(e.value);
+        selected.push(e.value);
     } else {
-      selected.splice(selected.indexOf(e.value), 1);
+        selected.splice(selected.indexOf(e.value), 1);
     }
     let eventsFind = find();
     cardContainer.innerHTML = createCards(eventsFind);
-  });
+    });
 });
 
 
