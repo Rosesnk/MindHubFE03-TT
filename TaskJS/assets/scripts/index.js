@@ -34,8 +34,5 @@ function createCards(cardsDate) {
 
 }
 
-// const verMas = document.getElementById("verMas");
+//Categories
 
-// verMas.addEventListener("click", () =>{
-    
-// })

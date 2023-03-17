@@ -14,7 +14,7 @@ function createCards(cardsDate) {
         
             cards += `
         <div class="col cards"> 
-            <a class="text-decoration-none text-reset"  href="./details.html">
+            <a class="text-decoration-none text-reset"  href="./details.html?id=${card._id}">
                 <div class="card" style = "width: 18rem; height: 450px;">
                         <img src="${card.image}" class="card-img-top" alt="..." style="width: 18rem; height: 200px;"> 
                         <div class="card-body"><h5 class="card-title">${card.name}</h5 >
