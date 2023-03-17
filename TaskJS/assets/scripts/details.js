@@ -1,57 +1,33 @@
-const queryString = location.search
+const params = new URLSearchParams(document.location.search);
 
-const params = new URLSearchParams(queryString)
+const id = params.get("id");
 
-const id = params.get("_id");
-
-const card = (data.events).find(events => events[0] == id);
+const card = data.events.filter((events) => events._id == id);
 
 const details = document.getElementById("cardDetail");
 
-details.innerHTML = `
-<div class="card mb-3 " style="max-width: 540px;">
-   <div class="row g-0">
-     <div class="col-md-4">
-       <img src="${card.image}" class="img-fluid rounded-start" alt="...">
-     </div>
-     <div class="col-md-8">
-       <div class="card-body">
-         <h5 class="card-title">${card.name}</h5>
-         <p class="card-text">${card.description}</p>
-         <p class="card-text"><small class="text-muted">Category:${card.category} - Capacity:${card.capacity} </small></p>
-         <p> Date: ${card.date} - Price: ${card.price}<p>
-         <p> Assistance: ${card.assistance}</p>
-       </div>
-     </div>
-   </div>
- </div> `
+details.innerHTML = createCard(card[0]);
 
-// const cardDetail = document.getElementById("cardDetail");
-
-// let generatedDetails = createDetails(data.events);
-
-// cardDetail.innerHTML = generatedDetails;
-
-// function createDetails(cardsDate) {
-//   let cards = "";
-//   for (const card of cardsDate) {
-//     cards = `
-//         <div class="card mb-3 " style="max-width: 540px;">
-//   <div class="row g-0">
-//     <div class="col-md-4">
-//       <img src="${card.image}" class="img-fluid rounded-start" alt="...">
-//     </div>
-//     <div class="col-md-8">
-//       <div class="card-body">
-//         <h5 class="card-title">${card.name}</h5>
-//         <p class="card-text">${card.description}</p>
-//         <p class="card-text"><small class="text-muted">Category:${card.category} - Capacity:${card.capacity} </small></p>
-//         <p> Date: ${card.date} - Price: ${card.price}<p>
-//         <p> Assistance: ${card.assistance}</p>
-//       </div>
-//     </div>
-//   </div>
-// </div> `;
-
-//   return cards;
-
+function createCard(card) {
+  return `<div id="event" class="card d-flex justify-content-center" >
+<img src="${card.image}" class="imgDetail" alt="Images">
+<div class="card-body">
+    <h5 class="card-title-detail">${card.name}</h5>
+    <P>Date: ${card.date}</p>
+    <div class="card-bottom d-flex flex-column justify-content-between">
+        <p class="card-text-detail">Description: ${card.description}</p>
+        <div class="d-flex flex-row justify-content-around" >
+            <p class="card-text-detail">Category: ${card.category}</p>
+            <p class="card-text-detail">Capacity: ${card.capacity}</p>
+            <p class="card-text-detail">Assistance: ${card.assistance} </p>
+            <p>Price: $ ${card.price}</P>
+        </div>
+        <div class="d-flex flex-row justify-content-end" >
+        <a href="./index.html" class="btn btn-primary">Home</a>
+        </div>
+    </div>
+    
+    
+</div>
+</div>`;
+}
