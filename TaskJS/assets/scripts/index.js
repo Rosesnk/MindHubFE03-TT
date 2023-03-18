@@ -2,6 +2,8 @@ const cardContainer = document.getElementById('cardContainer');
 let generatedCards = createCards(data.events);
 cardContainer.innerHTML = generatedCards;
 
+
+
 function createCards(cardsDate) {
     let cards = ''
     for (const card of cardsDate) {
@@ -23,10 +25,6 @@ function createCards(cardsDate) {
             </div > `;
     }
     return cards
-
-
-
-
 }
 
 function chargeCategories(arrayCategories) {
@@ -63,12 +61,12 @@ function filterCheckbox(events, checkbox) {
 }
 
 function find() {
-    let eventsFind = [];
+    let eventsFound = [];
     let eventCheckbox = filterCheckbox(data.events, selected);
-    eventsFind = eventCheckbox.filter((event) => {
-    return eventFilter = (event.name.toLowerCase().includes(search.value.toLowerCase()));
+    eventsFound = eventCheckbox.filter((event) => {
+        return eventFilters = (event.name.toLowerCase().includes(search.value.toLowerCase()));
     });
-    return eventsFind;
+    return eventsFound;
 }
 
 
@@ -79,10 +77,10 @@ function deleteDuplicate(array) {
         only.push(array[i]);
     }
     }
-    return only;
+    return only
 }
 
-let selected = [];
+let selected = []
 const categories = document.getElementById('category');
 let filterCat = deleteDuplicate(data.events.map((cat) => cat.category)
 );
@@ -98,15 +96,15 @@ checksEvent.forEach((e) => {
     } else {
         selected.splice(selected.indexOf(e.value), 1);
     }
-    let eventsFind = find();
-    cardContainer.innerHTML = createCards(eventsFind);
+    let eventsFound = find();
+    cardContainer.innerHTML = createCards(eventsFound);
     });
 });
 
 
-let search = document.getElementById('search');
+let search = document.getElementById("searchBox");
 search.addEventListener('keyup', () => {
-    let eventsFind = search();
-    cardContainer.innerHTML = createCards(eventsFind);
+    let eventsFound = find();
+    cardContainer.innerHTML = createCards(eventsFound);
 });
 
