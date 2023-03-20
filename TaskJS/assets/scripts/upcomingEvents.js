@@ -34,3 +34,83 @@ function createCards(cardsDate) {
 
 
 cardContainer.innerHTML = generatedCards;
+
+function chargeCategories(arrayCategories) {
+  let categories = "";
+  for (let i = 0; i < arrayCategories.length; i++) {
+    categories += createCheckbox(arrayCategories[i], i);
+  }
+  return categories;
+}
+
+function createCheckbox(cat, i) {
+  return `
+    <div class="form-check form-check-inline m-0">
+    <input class="form-check-input checked" type="checkbox" name="categories" id="categoria${i}" value="${cat}"   />
+    <label class="form-check-label" for="categoria${i}">${cat}</label>
+    </div>`;
+}
+
+function filterCheckbox(events, checkbox) {
+  let eventfilter = [];
+  if (checkbox.length > 0) {
+    checkbox.forEach((categoria) => {
+      events.forEach((event) => {
+        if (event.category == categoria) {
+          eventfilter.push(event);
+        }
+      });
+    });
+  } else {
+    eventfilter = events;
+  }
+  return eventfilter;
+}
+
+function find() {
+  let eventsFound = [];
+  let eventCheckbox = filterCheckbox(data.events, selected);
+  eventsFound = eventCheckbox.filter((event) => {
+    return (eventFilters = event.name
+      .toLowerCase()
+      .includes(search.value.toLowerCase()));
+  });
+  return eventsFound;
+}
+
+function deleteDuplicate(array) {
+  let only = [];
+  for (let i = 0; i < array.length; i++) {
+    if (!only.includes(array[i])) {
+      only.push(array[i]);
+    }
+  }
+  return only;
+}
+
+let selected = [];
+const categories = document.getElementById("category");
+let filterCat = deleteDuplicate(data.events.map((cat) => cat.category));
+let categoriesGenerated = chargeCategories(filterCat);
+categories.innerHTML = categoriesGenerated;
+
+let checksEvent = document.querySelectorAll(".checked");
+
+checksEvent.forEach((e) => {
+  e.addEventListener("change", () => {
+    if (e.checked) {
+      selected.push(e.value);
+    } else {
+      selected.splice(selected.indexOf(e.value), 1);
+    }
+    let eventsFound = find();
+    cardContainer.innerHTML = createCards(eventsFound);
+  });
+});
+
+let search = document.getElementById("searchBox");
+search.addEventListener("keyup", () => {
+  let eventsFound = find();
+  cardContainer.innerHTML = createCards(eventsFound);
+});
+
